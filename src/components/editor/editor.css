@@ -1,0 +1,47 @@
+.editor-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 5%;
+}
+
+.editor-title {
+  display: flex;
+  height: 10vh;
+  font-size: 30px;
+  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editor-input {
+  width: 50%;
+  height: 30vh;
+  box-sizing: content-box;
+  padding: 2%;
+  background-color: #272822;
+  border-radius: 10px;
+}
+.editor-input textarea {
+  height: 100%;
+  width: 100%;
+  background-color: #272822;
+  border: none;
+  resize: none;
+  color: white;
+}
+pre {
+  counter-reset: line;
+}
+.editor-input > textarea:focus {
+  outline: none;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding: 2%;
+}
