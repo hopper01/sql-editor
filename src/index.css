@@ -6,8 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 input[type='file'] {
-  display: none
+  display: none;
 }
 .upper-section {
   display: grid;
@@ -20,7 +21,7 @@ input[type='file'] {
   box-shadow: none;
 }
 #table-head {
-margin-bottom: -1rem;
+  margin-bottom: -1rem;
 }
 #table-head {
   display: flex;
@@ -96,7 +97,7 @@ tr:first-child:hover {
   justify-content: space-between;
 }
 #table-headings {
-  background-color: #726A95;
+  background-color: #726a95;
   color: #f4f4f4;
   font-weight: 600;
 }
@@ -108,7 +109,7 @@ tr:first-child:hover {
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #726A95;
+  border: 3px solid #726a95;
   padding: 5px;
   height: 20px;
   border-radius: 5px;
@@ -125,7 +126,3 @@ tr:first-child:hover {
   margin-left: 2rem;
   margin-right: 50%;
 }
-
-
-
-

@@ -1,4 +1,3 @@
-import React, { useMemo, useEffect } from 'react';
 import useData from '../../hooks/useData';
 import TableWrapper from './Table';
 import Loader from '../common/Loader';
@@ -6,7 +5,6 @@ import { Chip } from '@mui/material';
 
 const TableSection = ({ tableName, isSample }) => {
   const { data, queryTime, error } = useData(tableName, isSample);
-  console.log(data, queryTime, error);
   const columns = (() => {
     if (data.length > 0) {
       return Object.keys(data[0]).map(key => {
@@ -22,7 +20,7 @@ const TableSection = ({ tableName, isSample }) => {
   if (error)
     return (
       <section>
-        <h1>Something Went Wrong </h1>
+        <h1>404! Something is wrong here 🤨</h1>
       </section>
     );
   return (

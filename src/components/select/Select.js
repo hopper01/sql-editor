@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import Bouton from '../common/Button';
 import { TABLE_NAMES, SELECT_QUERY } from '../../constants/index';
 import {
   FormLabel,
-  Box,
   InputLabel,
   MenuItem,
   FormControl,
@@ -12,14 +10,19 @@ import {
 import './select.css';
 import { csvToJSON } from '../../utils/index';
 
-const SelectMenu = ({ setFileName, fileName, tableName, setTableName, setQuery, setIsSample }) => {
-  // const [fileName, setFileName] = useState('');
+const SelectMenu = ({
+  setFileName,
+  fileName,
+  tableName,
+  setTableName,
+  setQuery,
+  setIsSample,
+}) => {
   const readCSV = e => {
     e.preventDefault();
     const fileName = e.target.files[0].name || 'myFile.csv';
     const tableName = fileName.slice(0, -4);
     setFileName(fileName);
-    console.log(SELECT_QUERY + ' ' + tableName);
     setQuery(SELECT_QUERY + ' ' + tableName);
     setIsSample(false);
     const reader = new FileReader();
@@ -30,7 +33,6 @@ const SelectMenu = ({ setFileName, fileName, tableName, setTableName, setQuery, 
       localStorage.setItem('fileName', fileName);
     };
     reader.readAsText(e.target.files[0]);
-    
   };
   const handleChange = event => {
     const currentTable = event.target.value;
@@ -38,12 +40,9 @@ const SelectMenu = ({ setFileName, fileName, tableName, setTableName, setQuery, 
       setTableName(currentTable);
       setQuery(SELECT_QUERY + ' ' + currentTable);
       setIsSample(true);
-      // remove file from localStorage
       setFileName('');
-      // localStorage.clear();
     }
   };
-  // const tables = TABLE_NAMES;
   return (
     <div className="select-box">
       <div className="upload">

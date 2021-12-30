@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CsvDownload from 'react-json-to-csv';
 import { downloadAsJson } from '../../utils/index';
 import { Menu, MenuItem, Chip } from '@mui/material';
-import Bouton from "../common/Button";
+import Bouton from '../common/Button';
 import { useAsyncDebounce } from 'react-table';
 
 const SearchBar = ({
@@ -18,7 +18,7 @@ const SearchBar = ({
 
   return (
     <>
-      <Chip label={`${count} Records Found`} variant="outlined" />
+      <Chip label={`${count} Records Found`} variant="outlined" sx={{backgroundColor: '#726A95', color: '#ffff' }} />
       {/* Search Bar */}
       <div className="wrap">
         <div className="search">
@@ -34,20 +34,6 @@ const SearchBar = ({
           />
         </div>
       </div>
-      {/* <div>
-        <label className="">
-          <span className="">Search: </span>
-          <input
-            type="text"
-            value={value || ''}
-            onChange={e => {
-              setValue(e.target.value);
-              onChange(e.target.value);
-            }}
-            placeholder="Search records here ..."
-          />
-        </label>
-      </div> */}
     </>
   );
 };

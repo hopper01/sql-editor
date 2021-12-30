@@ -21,8 +21,8 @@ const App = () => {
       <header>
         <Header />
       </header>
-      <Suspense fallback={<Loader />}>
-        <main>
+      <main>
+        <Suspense fallback={<Loader />}>
           <section className="upper-section">
             <Editor
               setTableName={setTableName}
@@ -30,8 +30,8 @@ const App = () => {
               setQuery={setQuery}
               setIsOpen={setIsOpen}
               isSample={isSample}
-              fileName={fileName}
               setIsSample={setIsSample}
+              fileName={fileName}
               setFileName={setFileName}
             />
             <Select
@@ -40,12 +40,17 @@ const App = () => {
               setQuery={setQuery}
               setIsSample={setIsSample}
               fileName={fileName}
+              setIsOpen={setIsOpen}
               setFileName={setFileName}
             />
           </section>
-          {tableName && isOpen ? <TableSection tableName={tableName} isOpen={isOpen} setIsSample={setIsSample} fileName={fileName} isSample={isSample} /> : <></>}
-        </main>
-      </Suspense>
+          {tableName && isOpen ? (
+            <TableSection tableName={tableName} isSample={isSample} />
+          ) : (
+            <></>
+          )}
+        </Suspense>
+      </main>
     </div>
   );
 };

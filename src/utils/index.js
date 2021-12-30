@@ -7,7 +7,6 @@ const raiseError = message => {
     ...TOAST_SETTINGS,
   });
 };
-
 const rasieSuccess = message => {
   toast.success(message, {
     ...TOAST_SETTINGS,
@@ -26,7 +25,6 @@ const downloadFile = ({ data, fileName, fileType }) => {
   a.dispatchEvent(clickEvt);
   a.remove();
 };
-
 const downloadAsJson = (data, tableName) => {
   downloadFile({
     data: JSON.stringify(data),

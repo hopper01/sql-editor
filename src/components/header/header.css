@@ -2,10 +2,18 @@
   display: grid;
   grid-template-columns: 30% 60% 10%;
   padding: 10px;
+  align-items: center;
+  justify-items: stretch;
 }
 .heading {
   padding: 10px;
 }
+.heading > h2 {
+  font-family: monospace;
+  font-size: 2rem;
+  margin-left: 12%;
+}
 .logo {
   padding: 10px;
 }
+
