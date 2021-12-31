@@ -38,7 +38,6 @@ const Editor = ({
         setQuery(SELECT_QUERY + '' + tableName);
         setIsOpen(!isOpen);
       } else {
-        raiseError('Table Not Found!');
         setIsOpen(false);
       }
     } else {
