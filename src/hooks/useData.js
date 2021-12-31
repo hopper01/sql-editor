@@ -14,9 +14,7 @@ const useData = (tableName, isSample) => {
     let error = false,
       queryTime = 0;
     const data = JSON.parse(localStorage.getItem('data'));
-    console.log(data);
     if (!data) error = true;
-    rasieSuccess('Query ran successfully!');
     return { data, queryTime, error };
   }
   const { data, queryTime, error } = FetchFromSample(tableName);

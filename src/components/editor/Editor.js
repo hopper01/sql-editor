@@ -24,7 +24,10 @@ const Editor = ({
 
   const handleSubmit = () => {
     // check for valid select query Syntax
-    if (!isSample) return;
+    if (!isSample) {
+      setTableName(fileName);
+      return;
+    }
     if (query.startsWith(SELECT_QUERY)) {
       let tableName = query.toLowerCase().slice(query.indexOf('from') + 4);
       const X = tableName.slice(1);
@@ -47,7 +50,6 @@ const Editor = ({
     setFileName('');
     setIsSample(true);
     setIsOpen(false);
-    // localStorage.clear();
   };
   return (
     <div className="editor-box">
