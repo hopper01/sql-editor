@@ -51,6 +51,20 @@ const App = () => {
           )}
         </Suspense>
       </main>
+      <footer className="foot">
+        <p>
+          Coded by ⚙︎ ~{' '}
+          <span className="h-01">
+            <a
+              href="https://github.com/hopper01"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Anand Dhawan
+            </a>
+          </span>
+        </p>
+      </footer>
     </div>
   );
 };

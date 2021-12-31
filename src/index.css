@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F5F5FC;
+  background-color: #f5f5fc;
 }
 
 input[type='file'] {
@@ -126,4 +126,27 @@ tr:first-child:hover {
   justify-content: space-between;
   margin-left: 2rem;
   margin-right: 50%;
+}
+.foot {
+  z-index: 1;
+  text-align: center;
+  min-height: 100%;
+  height: auto !important;
+  margin: 0 auto -142px;
+}
+
+.foot p {
+  padding-bottom: 20px;
+  color: #726a95;
+  font-weight: 500;
+}
+.foot a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.h-01 {
+  font-weight: bolder;
+  color: black;
 }
