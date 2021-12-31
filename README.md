@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Page Load Time
+Page Load time of this website in desktop is in the range of 0.6 s to 1.2 s.
+## Lighthouse Report
+![alt text](/src/assets/performance.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Steps I took to optimize the page load time
+- Used code-splitting with ```React.Lazy()``` and ```Suspense``` to lazy load the components and split javaScript into multiple chunks using Dynamic runtime Imports for faster page load.
+- Used Lighthouse DevTools Extension to find the performance issues and fix them using their actionable suggestion.
+- Used vercel to deploy this website to leverage its Vercel Edge Network compression that results in the better performance.
 
 ## Available Scripts
 
