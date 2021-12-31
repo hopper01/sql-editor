@@ -2,12 +2,13 @@
 ## Live Demo 
 Deployed on Vercel - [Open Here](https://sql-editor-navy.vercel.app/)
 ## Features
-- Users can get data of any of the predefined SQL queries either by using SQL Editor or Sidebar Menu.
+- Users can get data of any of the predefined SQL queries either by using SQL Editor or by choosing from dropdown menu.
+- Users can also upload a CSV file of their own and perform SQL Queries on it.
 - Users can sort data directly by clicking the Table Headers title.
 - Users can search for a particular data among many records using the search bar.
 - Users can navigate to different pages using pagination.
 - Users can download the data in CSV and JSON Format in just one click.
-✅ Users can see query runtime in milliseconds(ms).
+- Users can see query runtime in milliseconds(ms).
 ## Page Load Time
 Page Load time of this website in desktop is in the range of 0.5 s to 1.2 s.
 ### Lighthouse Report
