@@ -43,6 +43,7 @@ const Editor = ({
         setIsOpen(!isOpen);
       } else {
         setIsOpen(false);
+        raiseError('Oops! Table not present');
       }
     } else {
       raiseError('Syntax Error: Enter a valid Query!');

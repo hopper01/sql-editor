@@ -71,7 +71,6 @@ const FetchFromSample = tableName => {
       }
     } else {
       setError(true);
-      raiseError('Oops!, Table Not Present');
     }
   };
   return { data, queryTime, error };
