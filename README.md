@@ -1,6 +1,7 @@
-# Page Load Time
+# SQLA - The SQL EDITOR.
+## Page Load Time
 Page Load time of this website in desktop is in the range of 0.4 s to 1 s.
-## Lighthouse Report
+### Lighthouse Report
 ![alt text](/src/assets/performance.png)
 
 # Steps I took to optimize the page load time
