@@ -5,6 +5,7 @@ import { Chip } from '@mui/material';
 
 const TableSection = ({ tableName, isSample }) => {
   const { data, queryTime, error } = useData(tableName, isSample);
+  // extract columnNames 
   const columns = (() => {
     if (data.length > 0) {
       return Object.keys(data[0]).map(key => {

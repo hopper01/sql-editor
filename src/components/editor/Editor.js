@@ -21,18 +21,22 @@ const Editor = ({
       setIsOpen(!isOpen);
     }
   }, [fileName, isOpen]);
-
+  /**
+   * Method to run the query
+   */
   const handleSubmit = () => {
-    // check for valid select query Syntax
+    // if user Table is selected
     if (!isSample) {
       const tableName = fileName.slice(0, -4);
       setTableName(tableName);
       setIsOpen(true);
       return;
     }
+    // check for valid select query Syntax
     if (query.startsWith(SELECT_QUERY)) {
       let tableName = query.toLowerCase().slice(query.indexOf('from') + 4);
       const X = tableName.slice(1);
+      // check if table is present in the constants
       if (tableName && TABLE_NAMES.includes(X)) {
         setTableName(tableName.split(' ')[1]);
         setQuery(SELECT_QUERY + '' + tableName);
@@ -44,7 +48,9 @@ const Editor = ({
       raiseError('Syntax Error: Enter a valid Query!');
     }
   };
-
+  /**
+   * Method to clear the editor -> resets the states to initial values.
+   */
   const clearEditor = () => {
     setTableName('');
     setQuery('');

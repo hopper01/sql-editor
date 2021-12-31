@@ -20,6 +20,9 @@ const SelectMenu = ({
   setIsSample,
   setIsOpen,
 }) => {
+  /**
+   * Method for reading the user CSV file and convert data into json.
+   */
   const readCSV = e => {
     e.preventDefault();
     const fileName = e.target.files[0].name || 'myFile.csv';
@@ -42,6 +45,9 @@ const SelectMenu = ({
     };
     reader.readAsText(e.target.files[0]);
   };
+  /**
+   * Method for selecting different tables from the samples-list.
+   */
   const handleChange = event => {
     const currentTable = event.target.value;
     if (currentTable) {
