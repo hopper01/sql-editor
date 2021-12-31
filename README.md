@@ -1,10 +1,19 @@
 # SQLA - The SQL EDITOR.
 ## Live Demo 
-Deployed on Vercel - [Open Here](https://sql-editor-pied.vercel.app)
+Deployed on Vercel - [Open Here](https://sql-editor-navy.vercel.app/)
+## Features
+- Users can get data of any of the predefined SQL queries either by using SQL Editor or Sidebar Menu.
+- Users can sort data directly by clicking the Table Headers title.
+- Users can search for a particular data among many records using the search bar.
+- Users can navigate to different pages using pagination.
+- Users can download the data in CSV and JSON Format in just one click.
+✅ Users can see query runtime in milliseconds(ms).
 ## Page Load Time
 Page Load time of this website in desktop is in the range of 0.5 s to 1.2 s.
 ### Lighthouse Report
 ![alt text](/src/assets/performance-report-l.png)
+### GTmetrix Report
+![alt text](/src/assets/performance-report-gt.png)
 
 # Steps I took to optimize the page load time
 - Used code-splitting with ```React.Lazy()``` and ```Suspense``` to lazy load the components and split javaScript into multiple chunks using Dynamic runtime Imports for faster page load.
