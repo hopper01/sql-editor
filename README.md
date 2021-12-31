@@ -2,7 +2,7 @@
 ## Page Load Time
 Page Load time of this website in desktop is in the range of 0.4 s to 1 s.
 ### Lighthouse Report
-![alt text](/src/assets/performance.png)
+![alt text](/src/assets/performance-report.png)
 
 # Steps I took to optimize the page load time
 - Used code-splitting with ```React.Lazy()``` and ```Suspense``` to lazy load the components and split javaScript into multiple chunks using Dynamic runtime Imports for faster page load.
