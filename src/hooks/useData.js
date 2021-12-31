@@ -16,9 +16,10 @@ const useData = (tableName, isSample) => {
     const data = JSON.parse(localStorage.getItem('data'));
     if (!data) error = true;
     return { data, queryTime, error };
+  } else {
+    const { data, queryTime, error } = FetchFromSample(tableName);
+    return { data, queryTime, error };
   }
-  const { data, queryTime, error } = FetchFromSample(tableName);
-  return { data, queryTime, error };
 };
 const FetchFromSample = tableName => {
   const [data, setData] = useState([]);

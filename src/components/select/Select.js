@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import './select.css';
 import { csvToJSON } from '../../utils/index';
+import { raiseError } from '../../utils/index';
 
 const SelectMenu = ({
   setFileName,
@@ -22,6 +23,10 @@ const SelectMenu = ({
   const readCSV = e => {
     e.preventDefault();
     const fileName = e.target.files[0].name || 'myFile.csv';
+    if(fileName.indexOf('.csv') < 0) {
+      raiseError("Incorrect File Format!");
+      return;
+    }
     const tableName = fileName.slice(0, -4);
     const reader = new FileReader();
     reader.onload = e => {
