@@ -17,20 +17,23 @@ const SelectMenu = ({
   setTableName,
   setQuery,
   setIsSample,
+  setIsOpen,
 }) => {
   const readCSV = e => {
     e.preventDefault();
     const fileName = e.target.files[0].name || 'myFile.csv';
     const tableName = fileName.slice(0, -4);
-    setFileName(fileName);
-    setQuery(SELECT_QUERY + ' ' + tableName);
-    setIsSample(false);
     const reader = new FileReader();
     reader.onload = e => {
+      localStorage.clear();
       const text = e.target.result;
       const json = csvToJSON(text);
       localStorage.setItem('data', JSON.stringify(json));
       localStorage.setItem('fileName', fileName);
+      setTableName(tableName);
+      setFileName(fileName);
+      setQuery(SELECT_QUERY + ' ' + tableName);
+      setIsSample(false);
     };
     reader.readAsText(e.target.files[0]);
   };

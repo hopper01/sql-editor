@@ -14,6 +14,7 @@ const useData = (tableName, isSample) => {
     let error = false,
       queryTime = 0;
     const data = JSON.parse(localStorage.getItem('data'));
+    console.log(data);
     if (!data) error = true;
     return { data, queryTime, error };
   }
