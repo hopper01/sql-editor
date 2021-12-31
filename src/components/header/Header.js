@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.jpg';
 import githubLogo from '../../assets/github-logo.png';
 
 const Header = () => {
@@ -10,14 +10,14 @@ const Header = () => {
         <img
           src={logo}
           alt="logo"
-          style={{ height: '6rem', width: '7.2rem' }}
+          style={{ height: '5rem', width: '5.3rem' }}
         />
       </div>
       <div className="heading">
         <h2>SQL EDITOR</h2>
       </div>
       <div className="repo">
-      <a href="https://github.com/hopper01/sql_editor" target="_blank">
+      <a href="https://github.com/hopper01/sql_editor" target="_blank" rel="noreferrer">
         <img
           src={githubLogo}
           alt="logo"
