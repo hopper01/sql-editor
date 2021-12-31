@@ -4,6 +4,9 @@
   padding: 1rem;
   box-shadow: none;
 }
+#table-base {
+  background-color: #F5F5FB;
+}
 #table-head {
 margin-bottom: -1rem;
 }

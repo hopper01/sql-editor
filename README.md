@@ -1,4 +1,6 @@
 # SQLA - The SQL EDITOR.
+## Live Demo 
+Deployed on Vercel - [Open Here](https://sql-editor-pied.vercel.app)
 ## Page Load Time
 Page Load time of this website in desktop is in the range of 0.5 s to 1.2 s.
 ### Lighthouse Report
