@@ -25,7 +25,9 @@ const Editor = ({
   const handleSubmit = () => {
     // check for valid select query Syntax
     if (!isSample) {
-      setTableName(fileName);
+      const tableName = fileName.slice(0, -4);
+      setTableName(tableName);
+      setIsOpen(true);
       return;
     }
     if (query.startsWith(SELECT_QUERY)) {
