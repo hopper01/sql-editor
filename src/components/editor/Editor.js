@@ -45,7 +45,7 @@ const Editor = ({
     setTableName('');
     setQuery('');
     setFileName('');
-    setIsSample(!isSample);
+    setIsSample(true);
     setIsOpen(false);
     // localStorage.clear();
   };
