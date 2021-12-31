@@ -1,5 +1,5 @@
 # Page Load Time
-Page Load time of this website in desktop is in the range of 0.6 s to 1.2 s.
+Page Load time of this website in desktop is in the range of 0.4 s to 1 s.
 ## Lighthouse Report
 ![alt text](/src/assets/performance.png)
 
